@@ -1,56 +1,16 @@
-# AI Content Generation Studio - InnoViast
+# React + Vite
 
-## Overview
-A modern, premium **AI Content Generation Studio** developed as part of the **InnoViast Internship Assignment Framework** (Week 2 - AI Solutions Engineering). This tool allows users to generate structured, high-quality content such as blog posts, social media captions, ad copy, emails, product descriptions, and LinkedIn posts.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## Problem Statement
-Content creators and marketers often struggle to maintain consistency in tone, audience targeting, and formatting. This tool solves this by providing a highly structured template-based AI generation system where users have fine-grained control over length, tone, and audience.
+Currently, two official plugins are available:
 
-## Features
-- **Template Studio**: Generate highly structured content targeting specific formats (Blog, Ad Copy, etc.).
-- **Fine-Grained Controls**: Control the tone (professional, casual, persuasive), audience, and length of the output.
-- **Prompt Lab**: A built-in testing environment allowing users to compare four different iterations of prompt engineering (from basic to advanced system-level prompts) to understand how constraints improve quality.
-- **Saved Library**: Auto-saves generated content into a local SQLite database for future editing and review.
-- **Editable Outputs**: All generated content is fully editable directly in the UI before being saved or exported.
-- **Mock/Offline Mode**: A rich simulated fallback mode allowing you to test the app even without API keys.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Tech Stack
-- **Frontend**: React (Vite), Custom CSS (Glassmorphism design), Lucide React (Icons).
-- **Backend**: Python (FastAPI), SQLite (Database).
-- **AI Integration**: Google Gemini API, OpenAI API (switchable from settings).
+## React Compiler
 
-## Setup Steps
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### 1. Backend Setup
-```bash
-cd backend
-python -m venv .venv
-# Activate the environment: 
-# Windows: .venv\Scripts\activate
-# Mac/Linux: source .venv/bin/activate
+## Expanding the Oxlint configuration
 
-pip install -r requirements.txt
-python -m uvicorn app.main:app --port 8000 --reload
-```
-
-### 2. Frontend Setup
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### 3. API Keys (Optional)
-The application works in "Mock Mode" by default. To use actual AI, go to the **Settings** tab in the app to configure your Gemini or OpenAI API keys, or set them in `backend/.env`.
-
-## Screenshots
-*(Add screenshots of your UI here to meet the assignment requirements)*
-- [x] Template Studio
-- [x] Prompt Lab
-- [x] Saved Library
-
-## Learning Outcomes
-- Developed a full-stack AI integrated application using FastAPI and React.
-- Mastered prompt engineering techniques (as demonstrated in the Prompt Lab) to control AI personas and structural outputs.
-- Built a premium glassmorphism user interface without relying heavily on pre-built UI frameworks.
-- Managed API integrations and error-handling fallbacks gracefully.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
